@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+   
+} */
+
+.game-container {
+    width: 100%;
+    height: 300px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('https://www.shutterstock.com/image-vector/horizontally-seamless-game-background-600nw-261374582.jpg');
+
+}
+
+#dino {
+    width: 80px;
+    height: 80px;
+    background-image: url('./assets/dinogame.png'); 
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+#cactus {
+    width: 30px;
+    height: 60px;
+    background-image: url('./assets/cactus.png');
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: moveCactus 2s linear infinite;
+}
+
+@keyframes moveCactus {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.animateJump {
+    animation: jumpAnimation 0.5s ease;
+}
+
+@keyframes jumpAnimation {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+
